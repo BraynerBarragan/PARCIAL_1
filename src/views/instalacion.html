@@ -1,0 +1,32 @@
+{% extends 'layouts/base.html' %}
+
+{% block titulo %}
+    Instalacion
+{% endblock %}
+
+
+{% block contenido %} 
+    <h1>Instalacion base de datos</h1>
+    <form action="{{ url_for('iniciando') }}" method="POST">
+        <div class="mb3">
+            <label for="host">Host:</label>
+            <input type="text" class="form-control" id="host" name="host" >
+        </div>
+        <div class="mb3">
+            <label for="port">Port:</label>
+            <input type="number" class="form-control" id="port" name="port">
+        </div>
+        <div class="mb3">   
+            <label for="user">User:</label>
+            <input type="text" class="form-control" id="user" name="user">
+        </div>
+        <div class="mb3">   
+            <label for="nombre">Password:</label>
+            <input type="password" class="form-control" id="password" name="password">
+        </div>
+
+        <button type="submit">Enviar</button>
+
+    </form>
+
+{% endblock %}

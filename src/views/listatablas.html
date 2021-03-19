@@ -1,0 +1,17 @@
+{% extends 'layouts/base.html' %}
+
+{% block titulo %}
+    Tablas
+{% endblock %}
+
+
+{% block contenido %} 
+    <h1>Tablas base de datos {{base}}</h1>
+    <ul>
+        {% for tabla in lista %}
+            <li><a href="{{url_for('especificarTabla', tabla = tabla[0])}}">{{tabla.0}}</a></li> 
+        {% endfor %}
+    </ul>
+ 
+
+{% endblock %}

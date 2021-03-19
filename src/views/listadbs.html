@@ -1,0 +1,17 @@
+{% extends 'layouts/base.html' %}
+
+{% block titulo %}
+Bases de datos
+{% endblock %}
+
+
+{% block contenido %} 
+    <h1>Bases de datos</h1>
+    <ul>
+        {% for base in dbs %}
+            <li><a href="{{ url_for('tables',base = base[0])}}">{{base.0}}</a></li>
+        {% endfor %}
+    </ul>
+ 
+
+{% endblock %}
